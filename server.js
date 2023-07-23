@@ -43,7 +43,7 @@ app.use(express.static('public'));
 
 app.use('/notes', notesRouter);
 
-const PORT = 3306;
+const mPORT = (process.env.PORT || 3306);
 
 
 
@@ -52,6 +52,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(PORT, () => {
-    console.log(`Visit localhost:${PORT} to view app`)
+app.listen(mPORT, () => {
+    console.log(`Visit localhost:${mPORT} to view app`)
 });
