@@ -29,6 +29,12 @@ Jacob McKitrick
 
 N/A
 
+## Links
+
+Deployed App: https://expressjs-notes-1703697eeed0.herokuapp.com/
+
+Github Repo:  https://github.com/MCKIT77/express.js-note-taker
+
 
 
 ## Questions
