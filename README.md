@@ -35,7 +35,10 @@ Deployed App: https://expressjs-notes-1703697eeed0.herokuapp.com/
 
 Github Repo:  https://github.com/MCKIT77/express.js-note-taker
 
+## Screenshots
 
+![Homepage](public/assets/images/image.png)
+![Notes Page](public/assets/images/image-1.png)
 
 ## Questions
 For any questions or inquiries, please contact me via GitHub or email:
