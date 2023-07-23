@@ -23,21 +23,32 @@ const fs = require('fs');
 
 const path = require('path');
 
-const notes = require('./public/assets/notes.html');
+const api = require('./routes/index')
+
+const notesRouter = require('./routes/notes');
+
+
 
 const app = express();
 
-
-const PORT = 3306;
+// Middleware for parsing JSON and urlencoded form data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/api', api);
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.send('./assets/index');
-})
 
-app.get('/notes', (req, res) => {
-    res.send(notes);
+
+
+app.use('/notes', notesRouter);
+
+const PORT = 3306;
+
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 })
 
 
